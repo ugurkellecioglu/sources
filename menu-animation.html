@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Animation</title>
+
+    <style>
+      a {
+        text-decoration: none;
+        color: var(--primary-color);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #e5e5e5;
+      }
+
+      .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: var(--background-color);
+        width: 30%;
+        height: 100vh;
+      }
+      :root {
+        --primary-color: #9333ea;
+        --background-color: #0d0d0d;
+      }
+
+      .text {
+        font-size: 64px;
+        margin: 0;
+        width: 100%;
+        color: var(--primary-color);
+        position: relative;
+        display: block;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        color: var(--background-color);
+
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        transition: all ease-in-out 0.9s;
+      }
+
+      .text:hover > span {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a class="text" href="#"> BRAND<span>HOME</span> </a>
+      <a class="text" href="#"> WORKS<span>AMAZING</span> </a>
+      <a href="#" class="text"> BLOG<span>READ</span> </a>
+    </div>
+
+    <script></script>
+  </body>
+</html>
